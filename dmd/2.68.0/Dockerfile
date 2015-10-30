@@ -4,10 +4,9 @@ ENV DMD_VERSION 68
 
 RUN curl -fSL http://master.dl.sourceforge.net/project/d-apt/files/d-apt.list -o /etc/apt/sources.list.d/d-apt.list \
     && apt-get update \
-    && apt-get -y --allow-unauthenticated install --reinstall d-apt-keyring
-
-RUN apt-get update \
-    && apt-get install --no-install-recommends -y \
+    && apt-get -y --allow-unauthenticated install --reinstall d-apt-keyring \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends \
         dmd-bin \
         dub \
         libphobos2-dev \

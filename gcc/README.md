@@ -1,2 +1,2 @@
-# docker-gcc
+# gcc
 Docker image packaging for GCC
