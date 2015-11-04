@@ -10,4 +10,5 @@ RUN apt-get update \
         gdbserver \
         libboost-all-dev \
         libgtest-dev \
-        libprotobuf-dev
+        libprotobuf-dev \
+    && rm -rf /var/lib/apt/lists/*
