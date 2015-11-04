@@ -8,5 +8,4 @@ RUN sed -i 's/httpredir/ftp\.jp/' /etc/apt/sources.list
 RUN apt-get update && apt-get install -y \
         postgis \
         postgresql-9.4-postgis-2.1 \
-    && apt-get clean \
-    && rm -fr /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/*
