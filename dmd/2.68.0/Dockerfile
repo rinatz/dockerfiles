@@ -11,4 +11,4 @@ RUN curl -fSL http://master.dl.sourceforge.net/project/d-apt/files/d-apt.list -o
         dub \
         libphobos2-dev \
         libphobos2-$DMD_VERSION \
-    && rm -fr /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/*
