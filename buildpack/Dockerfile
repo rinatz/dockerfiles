@@ -2,9 +2,6 @@ FROM buildpack-deps:trusty
 
 RUN sed -i 's/archive.ubuntu.com/ftp.riken.jp\/Linux/' /etc/apt/sources.list
 
-RUN curl -fSL 'http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key' | apt-key add - \
-    && echo 'deb http://pkg.jenkins-ci.org/debian binary/' > /etc/apt/sources.list.d/jenkins.list
-
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         build-essential \
@@ -22,14 +19,8 @@ RUN apt-get update \
         cmake \
         swig \
         protobuf-compiler \
-        libboost1.55-all-dev \
-        libgtest-dev \
         libprotobuf-dev \
+        libboost1.55-all-dev \
         python-pip \
         openjdk-7-jdk \
-        jenkins \
     && rm -rf /var/lib/apt/lists/*
-
-EXPOSE 8080
-
-CMD ["java", "-jar", "/usr/share/jenkins/jenkins.war"]
