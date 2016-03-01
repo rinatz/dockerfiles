@@ -4,23 +4,10 @@ RUN sed -i 's/archive.ubuntu.com/ftp.riken.jp\/Linux/' /etc/apt/sources.list
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-        build-essential \
-        autoconf \
-        clang-3.5 \
-        clang-format-3.5 \
-        clang-modernize-3.5 \
-        libclang-3.5-dev \
-        gdb \
-        gdbserver \
-        cgdb \
-        valgrind \
-        google-perftools \
-        strace \
         cmake \
-        swig \
-        protobuf-compiler \
-        libprotobuf-dev \
         libboost1.55-all-dev \
+        libprotobuf-dev \
+        protobuf-compiler \
         python-pip \
-        openjdk-7-jdk \
+        swig \
     && rm -rf /var/lib/apt/lists/*
