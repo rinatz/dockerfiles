@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  cpp:
+    build: .
+    container_name: cpp
+    privileged: true
+    ports:
+      - "2159:2159"
+    volumes:
+      - /c:/mnt/c
