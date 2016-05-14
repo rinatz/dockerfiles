@@ -8,4 +8,4 @@ services:
     ports:
       - "2159:2159"
     volumes:
-      - /c:/mnt/c
+      - /c:/c
