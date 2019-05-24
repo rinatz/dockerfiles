@@ -55,7 +55,7 @@ RUN git clone https://github.com/anyenv/anyenv /root/.anyenv && \
     pyenv install 3.7.3 && \
     pyenv global 3.7.3 && \
     eval "$(anyenv init -)" && \
-    pip install -U pip pipenv conan
+    pip install -U pip pipenv ansible conan
 
 RUN curl -fsSL http://bit.ly/rinatz-dotfiles | bash
 
